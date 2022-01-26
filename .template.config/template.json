@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Hubert Graham",
+    "classifications": [ ".NET 6 API",  "MVC", "Template"],
+    "identity": "Kode4Hue.CleanArchitecture.API",
+    "shortName": "Kode4Hue.CleanArchitecture.API",
+    "name": "Kode4Hue.CleanArchitecture.API",
+    "tags": {
+	    "language": "C#",
+	    "type": "project"
+	  },
+    "sourceName": "CleanArchitecture.API",
+    "preferNameDirectory": true
+}
