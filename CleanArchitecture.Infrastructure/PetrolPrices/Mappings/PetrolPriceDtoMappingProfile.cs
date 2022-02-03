@@ -6,7 +6,7 @@ using JoaPetrol = JamaicaOpenData.SharedLibrary.PetrolPrices.DTOs;
 
 namespace CleanArchitecture.Infrastructure.PetrolPrices.Mappings
 {
-    public class PetrolPriceDtoMappingProfile:Profile
+    public class PetrolPriceDtoMappingProfile : Profile
     {
 
         public PetrolPriceDtoMappingProfile()

@@ -5,7 +5,8 @@ namespace CleanArchitecture.Infrastructure.Common.Services
     public class BaseHttpService
     {
         protected HttpClient HttpClient;
-        public BaseHttpService(HttpClient httpClient)        {
+        public BaseHttpService(HttpClient httpClient)
+        {
             HttpClient = httpClient;
         }
 

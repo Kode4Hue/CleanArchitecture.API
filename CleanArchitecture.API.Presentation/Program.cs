@@ -1,8 +1,8 @@
 using CleanArchitecture.Application.Common.Extensions;
 using CleanArchitecture.Infrastructure.Extensions;
 using CleanArchitecture.SharedLibrary.Http.Filters;
-using Microsoft.AspNetCore.Mvc;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 

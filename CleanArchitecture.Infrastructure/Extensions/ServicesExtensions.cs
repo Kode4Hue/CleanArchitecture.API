@@ -1,5 +1,4 @@
 ﻿using CleanArchitecture.Application.Services.PetrolPrices;
-using CleanArchitecture.Infrastructure.PetrolPrices.Mappings;
 using CleanArchitecture.Infrastructure.PetrolPrices.Services;
 using JamaicaOpenData.SharedLibrary.Common.Extensions;
 using Microsoft.Extensions.DependencyInjection;
