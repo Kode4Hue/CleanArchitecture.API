@@ -3,6 +3,7 @@ using CleanArchitecture.Infrastructure.PetrolPrices.Mappings;
 using CleanArchitecture.Infrastructure.PetrolPrices.Services;
 using JamaicaOpenData.SharedLibrary.Common.Extensions;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace CleanArchitecture.Infrastructure.Extensions
 {
@@ -20,7 +21,7 @@ namespace CleanArchitecture.Infrastructure.Extensions
         {
             services.AddAutoMapper(config =>
             {
-                config.AddProfile<PetrolPriceDtoMappingProfile>();
+                config.AddMaps(Assembly.GetExecutingAssembly());
             });
             return services;
         }
