@@ -1,11 +1,24 @@
+using CleanArchitecture.Application.Common.Extensions;
+using CleanArchitecture.Infrastructure.Extensions;
+using CleanArchitecture.SharedLibrary.Http.Filters;
+using Microsoft.AspNetCore.Mvc;
+using FluentValidation.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+    options.Filters.Add<ApiExceptionFilterAttribute>())
+    .AddFluentValidation(x => x.AutomaticValidationEnabled = false);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// Customise default API behaviour
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+    options.SuppressModelStateInvalidFilter = true);
 
 var app = builder.Build();
 
