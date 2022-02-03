@@ -2,7 +2,9 @@
 using CleanArchitecture.Application.PetrolPrices.DTOs;
 using CleanArchitecture.Application.Services.PetrolPrices;
 using CleanArchitecture.SharedLibrary.Common.DTOs;
+using JamaicaOpenData.SharedLibrary.Common.DTOs;
 using JamaicaOpenData.SharedLibrary.Common.Services;
+using JoaPetrol = JamaicaOpenData.SharedLibrary.PetrolPrices.DTOs;
 
 namespace CleanArchitecture.Infrastructure.PetrolPrices.Services
 {
@@ -19,8 +21,7 @@ namespace CleanArchitecture.Infrastructure.PetrolPrices.Services
 
         public async Task<PaginatedList<PetrolPriceDto>> GetPetrolPrices(int limit, int pageNumber)
         {
-
-            var result = await _jamaicaOpenDataService.GetPetrolPrices(limit, pageNumber);
+            JoaResultDto<JoaPetrol.PetrolPriceDto> result = await _jamaicaOpenDataService.GetPetrolPrices(limit, pageNumber);
             var paginatedResult = _mapper.Map<PaginatedList<PetrolPriceDto>>(result);
 
             return paginatedResult;
