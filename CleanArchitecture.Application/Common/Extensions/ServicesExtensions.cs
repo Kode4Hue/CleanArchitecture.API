@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using FluentValidation;
 
 namespace CleanArchitecture.Application.Common.Extensions
 {
@@ -9,8 +10,9 @@ namespace CleanArchitecture.Application.Common.Extensions
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            var executingAssembly = Assembly.GetExecutingAssembly();
+            services.AddValidatorsFromAssembly(executingAssembly);
+            services.AddMediatR(executingAssembly);
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
