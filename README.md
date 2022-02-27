@@ -1,4 +1,4 @@
-# Kode4Hue.API
+# Kode4Hue.CleanArchitecture.API
 
 A .NET 6 MVC API template based on the principles of clean architecture. Feel free to grab it and use it on your next .NET API project.
 
@@ -20,7 +20,7 @@ A .NET 6 MVC API template based on the principles of clean architecture. Feel fr
 
 ### Core Technology Stack:
 * [ASP.NET Core 6](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
-* [Kode4Hue.CleanArchitecture.SharedLibrary](https://github.com/Kode4Hue/SharedLibrary)
+* [Kode4Hue.CleanArchitecture.SharedLibrary](https://github.com/Kode4Hue/CleanArchitecture.SharedLibrary)
 * [Kode4Hue.JamaicaOpenData.SharedLibrary](https://github.com/Kode4Hue/JamaicaOpenData.SharedLibrary)
 * [MediatR](https://github.com/jbogard/MediatR)
 * [FluentValidation](https://fluentvalidation.net/)
