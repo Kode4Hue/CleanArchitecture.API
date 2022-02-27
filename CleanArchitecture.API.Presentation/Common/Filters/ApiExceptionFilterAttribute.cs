@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.SharedLibrary.Common.Exceptions;
+﻿using CleanArchitecture.SharedLibrary.Common.Exceptions;
+using CleanArchitecture.SharedLibrary.Security.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
