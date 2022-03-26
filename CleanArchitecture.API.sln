@@ -11,6 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{A89D5D1E-8A24-4CDD-A921-06BEA08BD513}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1A16CD0D-4BB6-4799-91DF-80D2E202B460}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{38CB7D4C-A61B-4321-ABE9-1C7A53123D01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8568C29E-3DE9-4342-BB79-B07E22E9C88D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.IntegrationTests", "Application.IntegrationTests\Application.IntegrationTests.csproj", "{EBAC7BD9-37B6-453D-B293-76BAC95DDBBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +41,18 @@ Global
 		{A89D5D1E-8A24-4CDD-A921-06BEA08BD513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A89D5D1E-8A24-4CDD-A921-06BEA08BD513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A89D5D1E-8A24-4CDD-A921-06BEA08BD513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBAC7BD9-37B6-453D-B293-76BAC95DDBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBAC7BD9-37B6-453D-B293-76BAC95DDBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBAC7BD9-37B6-453D-B293-76BAC95DDBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBAC7BD9-37B6-453D-B293-76BAC95DDBBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38CB7D4C-A61B-4321-ABE9-1C7A53123D01} = {1A16CD0D-4BB6-4799-91DF-80D2E202B460}
+		{8568C29E-3DE9-4342-BB79-B07E22E9C88D} = {1A16CD0D-4BB6-4799-91DF-80D2E202B460}
+		{EBAC7BD9-37B6-453D-B293-76BAC95DDBBC} = {38CB7D4C-A61B-4321-ABE9-1C7A53123D01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B69AFF07-F928-4FF6-8EFF-3531127F4AB2}
